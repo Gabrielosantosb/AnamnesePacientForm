@@ -7,11 +7,13 @@ import { PacientComponent } from './modules/pacient/pacient.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ReportComponent } from './modules/report/report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PacientComponent
+    PacientComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,

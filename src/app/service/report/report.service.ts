@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {CookieService} from "ngx-cookie-service";
-import {environments} from "../../../../Anamnese/AnamnesePaciente/AnamnesePacient/src/environments/environments";
+
 import {Observable} from "rxjs";
-import {ReportRequest} from "../../../../Anamnese/AnamnesePaciente/AnamnesePacient/src/model/interfaces/report/ReportRequest";
-import {ReportResponse} from "../../../../Anamnese/AnamnesePaciente/AnamnesePacient/src/model/interfaces/report/ReportResponse";
+import {ReportRequest} from "../../model/report/ReportRequest";
+import {ReportResponse} from "../../model/report/ReportResponse";
+import {environments} from "../../environments/environments";
+
+
 
 @Injectable({
   providedIn: 'root'

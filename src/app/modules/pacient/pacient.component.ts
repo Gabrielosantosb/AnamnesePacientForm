@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {AbstractControl, FormBuilder, Validators} from "@angular/forms";
-
+import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { PacientService } from '../../service/pacient/pacient.service';
+import {PacientRequest} from "../../model/pacient/PacientRequest";
 
 @Component({
   selector: 'app-pacient',
@@ -20,7 +21,7 @@ export class PacientComponent {
     profession: ['', Validators.required],
   });
   constructor(private formBuilder: FormBuilder,
-              // private pacientService: PacientService
+              private pacientService: PacientService
   ) {
   }
   dateValidator(control: AbstractControl) {
@@ -33,6 +34,7 @@ export class PacientComponent {
     }
     return null;
   }
+
   // handlePacientForm(): void {
   //   if (this.pacientForm?.value && this.pacientForm.valid) {
   //     this.isLoading = true

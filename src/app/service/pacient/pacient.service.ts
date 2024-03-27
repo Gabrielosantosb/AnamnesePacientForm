@@ -24,6 +24,7 @@ export class PacientService {
 
   constructor(private http : HttpClient, private cookie: CookieService) { }
 
+
   createPacient(requestData : PacientRequest) : Observable<Array<PacientsResponse>>{
     console.log('Request', requestData)
     return this.http.post<Array<PacientsResponse>>(

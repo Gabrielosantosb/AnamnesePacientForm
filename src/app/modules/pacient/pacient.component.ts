@@ -11,14 +11,14 @@ import {PacientRequest} from "../../model/pacient/PacientRequest";
 export class PacientComponent {
   isLoading = false;
   public pacientForm = this.formBuilder.group({
-    username: ['', Validators.required],
-    email: ['', Validators.required],
-    address: ['', Validators.required],
-    uf: ['', Validators.required],
-    phone: ['', Validators.required],
-    birth: ['', [Validators.required, this.dateValidator]],
-    gender: ['', Validators.required],
-    profession: ['', Validators.required],
+    username: ['Gabriel', Validators.required],
+    email: ['gabriel@email.com', Validators.required],
+    address: ['qnj 32 22', Validators.required],
+    uf: ['DF', Validators.required],
+    phone: ['61982429000', Validators.required],
+    birth: ['2024-02-05', [Validators.required, this.dateValidator]],
+    gender: ['MASCULINO', Validators.required],
+    profession: ['Vagabundo', Validators.required],
   });
   constructor(private formBuilder: FormBuilder,
               private pacientService: PacientService
@@ -35,24 +35,24 @@ export class PacientComponent {
     return null;
   }
 
-  // handlePacientForm(): void {
-  //   if (this.pacientForm?.value && this.pacientForm.valid) {
-  //     this.isLoading = true
-  //     const requestPacient = this.pacientForm.value as PacientRequest
-  //     this.pacientService.createPacient(requestPacient)
-  //       .subscribe({
-  //         next: (response) => {
-  //           if(response){
-  //             this.isLoading = false;
-  //             console.log("Foi", response)
-  //           }
-  //         },
-  //         error :(err) =>{
-  //           console.log(err)
-  //           this.pacientForm.reset()
-  //         }
-  //       })
-  //   }
-  // }
+  handlePacientForm(): void {
+    if (this.pacientForm?.value && this.pacientForm.valid) {
+      this.isLoading = true
+      const requestPacient = this.pacientForm.value as PacientRequest
+      this.pacientService.createPacient(requestPacient)
+        .subscribe({
+          next: (response) => {
+            if(response){
+              this.isLoading = false;
+              console.log("Foi", response)
+            }
+          },
+          error :(err) =>{
+            console.log(err)
+            this.pacientForm.reset()
+          }
+        })
+    }
+  }
 
 }

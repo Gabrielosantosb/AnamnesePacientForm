@@ -2,33 +2,33 @@
 
   <h1 class="title_contato"><i class="icon icon-file-text-o"></i> Ficha Paciente</h1>
 
-  <form method="post" action="#">
+  <form (ngSubmit)="handlePacientForm()" [formGroup]="pacientForm">
 
     <div class="style-form-input full">
-      <input type="text" name="nome" required />
+      <input type="text" name="nome" required   formControlName="username"/>
       <label><i class="icon icon-user-1"></i>  Nome</label>
     </div>
 
 
     <div class="style-form-input">
-      <input type="text" name="email" required />
+      <input type="text" required formControlName="email"/>
       <label><i class="icon icon-mail-1"></i> E-mail</label>
     </div>
 
 
     <div class="style-form-input right">
-      <input type="phone" name="phone" required />
+      <input type="phone" name="phone" required formControlName = 'phone'/>
       <label><i class="icon icon-info-circled"></i> Telefone</label>
     </div>
 
     <div class="style-form-input full">
-      <input type="text" name="birth" required />
+      <input type="text" name="birth" required  formControlName="birth"/>
       <label><i class="icon icon-calendar"></i> Data de nascimento</label>
     </div>
 
 
     <div class="style-form-input full">
-      <select name="estado" class="dropdown select_form" required>
+      <select name="estado" class="dropdown select_form" required  formControlName="uf">
         <option selected disabled class="form_select_option" value="">Selecione um Estado</option>
         <option value="Acre">Acre</option>
         <option value="Alagoas">Alagoas</option>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="style-form-input full">
-      <select name="gender" class="dropdown select_form" required>
+      <select name="gender" class="dropdown select_form" required  formControlName="gender">
         <option selected disabled class="form_select_option" value="">Gênero</option>
         <option value="Masculino">Masculino</option>
         <option value="Feminino">Feminino</option>
@@ -71,13 +71,13 @@
 
 
     <div class="style-form-input full">
-      <input type="text" name="address" required />
+      <input type="text" name="address" required  formControlName="address"/>
       <label><i class="icon icon-user-1"></i>  Endereço</label>
     </div>
 
 
     <div class="style-form-input full">
-      <input type="text" name="profession" required />
+      <input type="text" name="profession" required  formControlName="profession">
       <label><i class="icon icon-user-1"></i>  Profissão</label>
     </div>
 
@@ -88,7 +88,7 @@
     <div class="style-form-input full">
 
       <input type="hidden" name="acao" value="enviar">
-      <button class="btn-submit">Enviar</button>
+      <button class="btn-submit" >Enviar</button>
 
     </div>
 

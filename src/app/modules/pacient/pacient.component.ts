@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { PacientService } from '../../service/pacient/pacient.service';
 import {PacientRequest} from "../../model/pacient/PacientRequest";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pacient',
@@ -21,7 +22,8 @@ export class PacientComponent {
     profession: ['Vagabundo', Validators.required],
   });
   constructor(private formBuilder: FormBuilder,
-              private pacientService: PacientService
+              private pacientService: PacientService,
+              private router : Router
   ) {
   }
   dateValidator(control: AbstractControl) {
@@ -44,7 +46,8 @@ export class PacientComponent {
           next: (response) => {
             if(response){
               this.isLoading = false;
-              console.log("Foi", response)
+              this.router.navigate(['/ReportForm']);
+
             }
           },
           error :(err) =>{

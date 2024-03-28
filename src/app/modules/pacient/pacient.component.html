@@ -81,15 +81,8 @@
       <label><i class="icon icon-user-1"></i>  Profissão</label>
     </div>
 
-
-
-
-
     <div class="style-form-input full">
-
-      <input type="hidden" name="acao" value="enviar">
-      <button class="btn-submit" >Enviar</button>
-
+      <button class="btn-submit" [disabled]="isLoading">Enviar</button>
     </div>
 
   </form>

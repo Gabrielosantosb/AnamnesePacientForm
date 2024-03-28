@@ -125,7 +125,11 @@ textarea {
   border:none;
 
 }
-
+.btn-submit:disabled {
+  background-color: #ccc; /* Cor de fundo cinza */
+  cursor: not-allowed; /* Cursor de não permitido */
+  opacity: 0.7; /* Opacidade reduzida */
+}
 .btn-submit:hover {
 
   background-color: #5be1e5;

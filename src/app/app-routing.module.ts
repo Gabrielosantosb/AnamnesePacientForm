@@ -1,23 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {PacientComponent} from "./modules/pacient/pacient.component";
-import {ReportComponent} from "./modules/report/report.component";
+import {AppComponent} from "./app.component";
 
-const routes: Routes = [ {
-  path: '',
-  redirectTo: 'ReportForm',
-  pathMatch: 'full'
-},
+
+const routes: Routes = [
   {
-    path: 'PacientForm',
-    component: PacientComponent
-  },
-  {
-    path: 'ReportForm',
-    component: ReportComponent
+    path: '',
+    component: AppComponent
   }
-
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -10,6 +10,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class AppComponent implements OnInit{
   token !: string;
+  pacientId !: number;
   public reportForm = this.formBuilder.group({
 
     medicalHistory: ['', Validators.required],
@@ -33,7 +34,11 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.token = params['token'];
+      this.pacientId = params['pacientId'];
       console.log('Token recebido:', this.token);
+      console.log('PacientId recebido:', this.pacientId);
+
     });
   }
+
 }

@@ -13,6 +13,8 @@ import {RippleModule} from "primeng/ripple";
 import {ButtonModule} from "primeng/button";
 import { SucessComponent } from './pages/sucess/sucess.component';
 import {CheckboxModule} from "primeng/checkbox";
+import {ReportComponent} from "./modules/report/report.component";
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 // import { ReportComponent } from './modules/report/report.component';
 
 @NgModule({
@@ -20,6 +22,8 @@ import {CheckboxModule} from "primeng/checkbox";
     AppComponent,
     PacientComponent,
     SucessComponent,
+    ReportComponent,
+    NotFoundComponent
 
   ],
   imports: [

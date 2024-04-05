@@ -1,13 +1,12 @@
 <div class="container_form">
   <h1 class="title_contato"><i class="icon icon-file-text-o"></i> Ficha Anamnese</h1>
 
-  <form [formGroup]="reportForm">
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
 
     <div class="style-form-input full">
       <input type="text" name="nome" required formControlName="medicalHistory"/>
       <label><i class="icon icon-user-1"></i> Histórico Médico</label>
     </div>
-
 
     <div class="style-form-input full">
       <input type="text" required formControlName="currentMedications"/>

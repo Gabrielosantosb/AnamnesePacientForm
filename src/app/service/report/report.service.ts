@@ -24,10 +24,19 @@ export class ReportService {
   }
 
 
-  constructor(private http : HttpClient, private cookie: CookieService) { }
-  createReport(pacientId: number, requestData: ReportRequest): Observable<Array<ReportResponse>> {
+  constructor(private http : HttpClient, private cookie: CookieService, ) { }
+  createReport(pacientId: number, requestData: ReportRequest, token: string): Observable<Array<ReportResponse>> {
+    console.log("TOKEN CHEGOU AQUI", token)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      })
+    };
     return this.http.post<Array<ReportResponse>>(
-      `${this.API_URL}/api/Report/create-report/${pacientId}`, requestData, this.httpOptions
+      `${this.API_URL}/api/Report/create-report/${pacientId}`,
+      requestData,
+      httpOptions
     );
   }
 

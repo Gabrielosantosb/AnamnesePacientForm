@@ -24,7 +24,9 @@ export class AppComponent implements OnInit{
     alcoholConsumption: [0, Validators.min(0)],
     emergencyContactName: ['teste', Validators.required],
     emergencyContactPhone: ['teste', Validators.required],
-    observations: ['teste']
+    observations: ['teste'],
+    bloodType: ['', Validators.required],
+    allergies: [false]
   })
   constructor(
     private formBuilder: FormBuilder,

@@ -1,3 +1,4 @@
+
 <div class="container_form">
 
   <h1 class="title_contato"><i class="icon icon-file-text-o"></i> Ficha Anamnese</h1>
@@ -30,61 +31,64 @@
     <div class="style-form-input full">
       <select name="estado" class="dropdown select_form" required  formControlName="familyHistoryCardiovascularIssues">
         <option selected disabled class="form_select_option" value="">Problema cardíaco familiar?</option>
-
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
       </select>
     </div>
 
     <div class="style-form-input full">
       <select name="gender" class="dropdown select_form" required  formControlName="physicalActivity">
-        <option selected disabled class="form_select_option" value="">Pratica ativade física?</option>
-
+        <option selected disabled class="form_select_option" value="">Pratica atividade física?</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
       </select>
     </div>
 
 
     <div class="style-form-input full">
       <input type="text" name="address" required  formControlName="smoker"/>
-      <label><i class="icon icon-user-1"></i>  Fumante:</label>
+      <label><i class="icon icon-user-1"></i>  Fumante (há quantos anos?):</label>
     </div>
 
 
     <div class="style-form-input full">
-      <input type="text" name="profession" required  formControlName="alcoholConsumption">
-      <label><i class="icon icon-user-1"></i>  Consumo de alcool, 1 a 5</label>
+      <input type="number" min="0" max="5" name="profession" required  formControlName="alcoholConsumption">
+      <label><i class="icon icon-user-1"></i>  Consumo de Álcool (unidades/dia):</label>
     </div>
 
-
-    <div class="style-form-input full">
-      <input type="text" name="profession" required  formControlName="emergencyContactName">
-      <label><i class="icon icon-user-1"></i> Nome contato de emergencia</label>
-    </div>
 
     <div class="style-form-input full">
       <input type="text" name="profession" required  formControlName="emergencyContactName">
-      <label><i class="icon icon-user-1"></i> Numero contato de emergencia</label>
+      <label><i class="icon icon-user-1"></i> Nome contato de emergência</label>
     </div>
 
     <div class="style-form-input full">
-      <input type="text" name="profession" required  formControlName="alcoholConsumption">
-      <label><i class="icon icon-user-1"></i>  Consumo de alcool, 1 a 5</label>
+      <input type="text" name="profession" required  formControlName="emergencyContactPhone">
+      <label><i class="icon icon-user-1"></i> Telefone contato de emergência</label>
     </div>
 
     <div class="style-form-input full">
-      <input type="text" name="profession" required  formControlName="observations">
-      <label><i class="icon icon-user-1"></i>  Observações</label>
+      <select name="gender" class="dropdown select_form" required  formControlName="bloodType">
+        <option selected disabled class="form_select_option" value="">Tipo sanguíneo:</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
     </div>
-
-
-
-
 
     <div class="style-form-input full">
-
-      <input type="hidden" name="acao" value="enviar">
-      <button class="btn-submit" >Enviar</button>
-
+      <input type="text" name="profession" required  formControlName="allergies">
+      <label><i class="icon icon-user-1"></i>  Alergias:</label>
     </div>
 
-  </form>
+<div class="style-form-input full">
+
+  <input type="hidden" name="acao" value="enviar">
+  <button class="btn-submit">Enviar</button>
 
 </div>

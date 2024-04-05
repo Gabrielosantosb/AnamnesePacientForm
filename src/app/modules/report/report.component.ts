@@ -5,6 +5,7 @@ import {ProgressBarModule} from "primeng/progressbar";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ReportRequest} from "../../model/report/ReportRequest";
 import {Subject, takeUntil} from "rxjs";
+import {ToastMessage} from "../../service/toast-message/toast-message";
 
 @Component({
   selector: 'app-report',
@@ -35,7 +36,8 @@ export class ReportComponent implements OnInit, OnDestroy{
     private formBuilder: FormBuilder,
     private reportService: ReportService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private toastMessage: ToastMessage
   ) {}
 
   ngOnInit(): void {
@@ -62,6 +64,7 @@ export class ReportComponent implements OnInit, OnDestroy{
               }
             },
             error:(err) =>{
+              this.toastMessage.ErrorMessage('O usuário ja possui uma ficha cadastrada')
               console.log(err)
             }
           })

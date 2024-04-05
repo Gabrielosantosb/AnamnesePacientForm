@@ -15,6 +15,8 @@ import { SucessComponent } from './pages/sucess/sucess.component';
 import {CheckboxModule} from "primeng/checkbox";
 import {ReportComponent} from "./modules/report/report.component";
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import {MessageService} from "primeng/api";
+import {ToastModule} from "primeng/toast";
 // import { ReportComponent } from './modules/report/report.component';
 
 @NgModule({
@@ -37,9 +39,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     RippleModule,
     ButtonModule,
     CheckboxModule,
+    ToastModule,
 
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

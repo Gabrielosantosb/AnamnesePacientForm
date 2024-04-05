@@ -58,7 +58,7 @@ export class ReportComponent implements OnInit, OnDestroy{
             next: (response) =>{
               if(response){
                 console.log(response)
-                this.router.navigate(['sucesso'])
+                this.router.navigateByUrl('/sucesso', { replaceUrl: true });
               }
             },
             error:(err) =>{

@@ -7,12 +7,19 @@ import { PacientComponent } from './modules/pacient/pacient.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {FileUploadModule} from "primeng/fileupload";
+import {ProgressBarModule} from "primeng/progressbar";
+import {RippleModule} from "primeng/ripple";
+import {ButtonModule} from "primeng/button";
+import { SucessComponent } from './pages/sucess/sucess.component';
+import {CheckboxModule} from "primeng/checkbox";
 // import { ReportComponent } from './modules/report/report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PacientComponent,
+    SucessComponent,
 
   ],
   imports: [
@@ -22,6 +29,10 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    ProgressBarModule,
+    RippleModule,
+    ButtonModule,
+    CheckboxModule,
 
   ],
   providers: [],

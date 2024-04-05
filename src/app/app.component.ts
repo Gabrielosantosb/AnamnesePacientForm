@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {ReportService} from "./service/report/report.service";
 import {ActivatedRoute} from "@angular/router";
+import {ProgressBarModule} from "primeng/progressbar";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ import {ActivatedRoute} from "@angular/router";
 export class AppComponent implements OnInit{
   token !: string;
   pacientId !: number;
+  isLoading = false
+  loadingMode: ProgressBarModule = 'indeterminate';
   public reportForm = this.formBuilder.group({
 
     medicalHistory: ['', Validators.required],

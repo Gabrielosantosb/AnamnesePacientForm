@@ -1,0 +1,120 @@
+title_formulario {
+  text-align: center;
+}
+.title_contato {
+  text-align: center;
+  font-family: 'open_sansregular';
+  font-weight: 600;
+  font-size:1.8em;
+  color: #444;
+  margin-bottom:10px;
+}
+
+.style-form-input {
+
+  float: left;
+  width: 295px;
+  margin: 1em 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+.right { float:right; }
+
+@media only screen and (max-width: 768px){
+
+  .style-form-input { width:100%; }
+
+}
+
+.style-form-input label {
+  color: #999;
+  padding: 7px 15px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.style-form-input.full {
+  width: 650px;
+  max-width: 100%;
+}
+
+
+input,select,
+textarea {
+
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  font-size: 1em;
+  background-color: #ffffff;
+  color: #999;
+  border-radius: 6px;
+  border: 1px #eeecec solid;
+
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 7em;
+}
+
+.container_form {
+  width: 650px;
+  max-width: 100%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 1px 0px 1.2px 0px #e3e3e3;
+  border-radius: 16px;
+  padding: 1em;
+  margin: 20px auto 25px auto;
+
+
+  /* Adiciona flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+}
+.btn-submit {
+
+  display: none;
+
+}
+
+@media (max-width: 768px) {
+
+  .btn-submit {
+
+    width:100%;
+    float: none;
+    text-align:center;
+
+  }
+}
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+
+  color: #f00;
+  font-style: normal;
+
+}

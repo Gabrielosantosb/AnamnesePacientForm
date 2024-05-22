@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReportComponent } from './report.component';
+import { AnnotationComponent } from './annotation.component';
 
 describe('ReportComponent', () => {
-  let component: ReportComponent;
-  let fixture: ComponentFixture<ReportComponent>;
+  let component: AnnotationComponent;
+  let fixture: ComponentFixture<AnnotationComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ReportComponent]
+      declarations: [AnnotationComponent]
     });
-    fixture = TestBed.createComponent(ReportComponent);
+    fixture = TestBed.createComponent(AnnotationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

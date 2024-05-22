@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {SucessComponent} from "./pages/sucess/sucess.component";
-import {ReportComponent} from "./modules/report/report.component";
+import {AnnotationComponent} from "./modules/annotation/annotation.component";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 
 
 const routes: Routes = [
   {
     path: '',
-    component: ReportComponent,
+    component: AnnotationComponent,
     pathMatch: 'full'
   },
   {

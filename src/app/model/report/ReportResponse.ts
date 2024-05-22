@@ -1,4 +1,4 @@
-export interface ReportResponse
+export interface AnotationResponse
 {
   reportId: number,
   reportDateTime: Date,

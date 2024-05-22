@@ -1,0 +1,21 @@
+
+
+<div class="container_form">
+  <h1 class="title_contato"><i class="icon icon-file-text-o"></i> Ficha Anamnese</h1>
+
+  <form [formGroup]="anotationForm" (ngSubmit)="onSubmit()">
+    <div class="style-form-input full">
+      <textarea id="txtArea" rows="10" cols="70" name="nome" required formControlName="comments" class="custom-input" style="height: 150px;"></textarea>
+      <label><i class="icon icon-user-1"></i> Anotações</label>
+    </div>
+
+    <div class="style-form-input full">
+      <input type="hidden" name="acao" value="enviar">
+      <button type="submit" class="w-full p-3 text-xl" pButton pRipple label="Enviar"
+              [disabled]="!anotationForm.valid"></button>
+      <div style="margin-top: 20px">
+        <p-progressBar *ngIf="isLoading" mode="{{loadingMode}}"></p-progressBar>
+      </div>
+    </div>
+  </form>
+</div>

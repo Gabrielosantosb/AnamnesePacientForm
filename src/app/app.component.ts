@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {ReportService} from "./service/report/report.service";
+import {AnotationService} from "./service/anotation/anotation.service";
 import {ActivatedRoute} from "@angular/router";
 import {ProgressBarModule} from "primeng/progressbar";
 

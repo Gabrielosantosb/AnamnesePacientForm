@@ -13,18 +13,18 @@ import {RippleModule} from "primeng/ripple";
 import {ButtonModule} from "primeng/button";
 import { SucessComponent } from './pages/sucess/sucess.component';
 import {CheckboxModule} from "primeng/checkbox";
-import {ReportComponent} from "./modules/report/report.component";
+import {AnnotationComponent} from "./modules/annotation/annotation.component";
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MessageService} from "primeng/api";
 import {ToastModule} from "primeng/toast";
-// import { ReportComponent } from './modules/report/report.component';
+// import { AnnotationComponent } from './modules/anotation/anotation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PacientComponent,
     SucessComponent,
-    ReportComponent,
+    AnnotationComponent,
     NotFoundComponent
 
   ],

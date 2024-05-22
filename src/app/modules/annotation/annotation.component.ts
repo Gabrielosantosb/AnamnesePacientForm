@@ -3,9 +3,9 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {AnotationService} from "../../service/anotation/anotation.service";
 import {ProgressBarModule} from "primeng/progressbar";
 import {ActivatedRoute, Router} from "@angular/router";
-import {ReportRequest} from "../../model/report/ReportRequest";
 import {Subject, takeUntil} from "rxjs";
 import {ToastMessage} from "../../service/toast-message/toast-message";
+import {AnnotationRequest} from "../../model/annotation/AnnotationRequest";
 
 @Component({
   selector: 'app-anotation',
@@ -44,9 +44,7 @@ export class AnnotationComponent implements OnInit, OnDestroy{
     var pacientId = this.pacientId;
     if (pacientId) {
       console.log('Adicionar relatório', this.anotationForm.value );
-      const requestData = {
-        comments: this.anotationForm.value
-      };
+      const requestData = this.anotationForm.value as AnnotationRequest
 
       this.anotationService.createAnotation(pacientId, requestData, this.token)
         .pipe(takeUntil(this.destroy$))

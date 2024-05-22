@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {CookieService} from "ngx-cookie-service";
 import {environments} from "../../environments/environments";
+import {AnnotationRequest} from "../../model/annotation/AnnotationRequest";
+import {Observable} from "rxjs";
 
 
 
@@ -21,14 +23,14 @@ export class AnotationService {
 
 
   constructor(private http : HttpClient, private cookie: CookieService, ) { }
-  createAnotation(pacientId: number, requestData: any, token: string) {
+  createAnotation(pacientId: number, requestData: AnnotationRequest, token: string):Observable<AnnotationRequest> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`
       })
     };
-    return this.http.post(
+    return this.http.post<AnnotationRequest>(
       `${this.API_URL}/api/Annotation/create-annotation/${pacientId}`,
       requestData,
       httpOptions
